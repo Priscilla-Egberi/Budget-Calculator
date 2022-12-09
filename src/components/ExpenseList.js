@@ -5,11 +5,13 @@ export default function ExpenseList({expenses}) {
     console.log(expenses)
   return (
     <>
+    <ul className="list">
     {expenses.map((expense)=>{
         return <Item key={expense.id} expense={expense} />
     })}
+    </ul>
     {expenses.length > 0 && <button className="btn">Clear Expenses <MdDelete className="btn-icon" /></button>}
-    
+
     </>
   )
 }
