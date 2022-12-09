@@ -1,10 +1,15 @@
 import React from 'react'
 import Item from "./ExpenseItem"
-export default function ExpenseList() {
+import {MdDelete} from "react-icons/md"
+export default function ExpenseList({expenses}) {
+    console.log(expenses)
   return (
     <>
-    <div>ExpenseList</div>
-    <Item />
+    {expenses.map((expense)=>{
+        return <Item key={expense.id} expense={expense} />
+    })}
+    {expenses.length > 0 && <button className="btn">Clear Expenses <MdDelete className="btn-icon" /></button>}
+    
     </>
   )
 }

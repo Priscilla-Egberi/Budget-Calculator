@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function ExpenseItem() {
+export default function ExpenseItem({expense}) {
   return (
-    <div>ExpenseItem</div>
+    <div>ExpenseItem {expense.amount}</div>
   )
 }
